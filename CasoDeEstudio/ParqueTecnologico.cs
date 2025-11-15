@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CasoDeEstudio
 {
-    public partial class Form1 : Form
+    public partial class ParqueTecnologico : Form
     {
-        public Form1()
+        public ParqueTecnologico()
         {
             InitializeComponent();
         }
@@ -114,6 +114,21 @@ namespace CasoDeEstudio
                     AsignarNombresATodosLosNodos(nodo.Nodes);
                 }
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tvJerarquia_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
+        }
+
+        private void txtPuesto_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
