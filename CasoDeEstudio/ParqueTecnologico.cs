@@ -130,5 +130,35 @@ namespace CasoDeEstudio
         {
 
         }
+
+        private void tvJerarquia_DrawNode(object sender, DrawTreeNodeEventArgs e)
+        {
+            if (e.Node == null) return;
+
+            Color colorTexto;
+            Brush brochaFondo;
+
+            if ((e.State & TreeNodeStates.Selected) != 0)
+            {
+                brochaFondo = new SolidBrush(Color.Tan);
+                colorTexto = Color.Black;
+            }
+            else
+            {
+                brochaFondo = new SolidBrush(tvJerarquia.BackColor);
+                colorTexto = tvJerarquia.ForeColor;
+            }
+
+            e.Graphics.FillRectangle(brochaFondo, e.Bounds);
+
+            TextRenderer.DrawText(e.Graphics,
+                                  e.Node.Text,
+                                  tvJerarquia.Font,
+                                  e.Bounds,
+                                  colorTexto,
+                                  TextFormatFlags.VerticalCenter | TextFormatFlags.Left);
+
+            brochaFondo.Dispose();
+        }
     }
 }

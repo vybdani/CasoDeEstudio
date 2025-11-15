@@ -157,12 +157,14 @@
             // 
             // tvJerarquia
             // 
+            this.tvJerarquia.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawText;
             this.tvJerarquia.Font = new System.Drawing.Font("Dubai", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tvJerarquia.Location = new System.Drawing.Point(41, 265);
             this.tvJerarquia.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tvJerarquia.Name = "tvJerarquia";
             this.tvJerarquia.Size = new System.Drawing.Size(570, 271);
             this.tvJerarquia.TabIndex = 0;
+            this.tvJerarquia.DrawNode += new System.Windows.Forms.DrawTreeNodeEventHandler(this.tvJerarquia_DrawNode);
             this.tvJerarquia.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvJerarquia_AfterSelect);
             // 
             // tabPage1
