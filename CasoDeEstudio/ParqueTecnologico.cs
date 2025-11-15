@@ -160,5 +160,15 @@ namespace CasoDeEstudio
 
             brochaFondo.Dispose();
         }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblResultadoRuta_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

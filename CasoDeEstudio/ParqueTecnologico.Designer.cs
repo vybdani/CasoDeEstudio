@@ -39,8 +39,16 @@
             this.tvJerarquia = new System.Windows.Forms.TreeView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbOrigen = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbDestino = new System.Windows.Forms.ComboBox();
+            this.btnCalcularRuta = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblResultadoRuta = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -169,14 +177,22 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 34);
+            this.tabPage1.Controls.Add(this.lblResultadoRuta);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.btnCalcularRuta);
+            this.tabPage1.Controls.Add(this.cbDestino);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.cbOrigen);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Location = new System.Drawing.Point(4, 38);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage1.Size = new System.Drawing.Size(407, 662);
+            this.tabPage1.Size = new System.Drawing.Size(651, 574);
             this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Rutas [Grafo]";
             this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // groupBox1
             // 
@@ -196,6 +212,77 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Tan;
+            this.label2.Location = new System.Drawing.Point(64, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(148, 34);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Edificio Origen:";
+            // 
+            // cbOrigen
+            // 
+            this.cbOrigen.FormattingEnabled = true;
+            this.cbOrigen.Location = new System.Drawing.Point(225, 38);
+            this.cbOrigen.Name = "cbOrigen";
+            this.cbOrigen.Size = new System.Drawing.Size(363, 37);
+            this.cbOrigen.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Tan;
+            this.label3.Location = new System.Drawing.Point(64, 98);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(155, 34);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Edificio Destino:";
+            // 
+            // cbDestino
+            // 
+            this.cbDestino.FormattingEnabled = true;
+            this.cbDestino.Location = new System.Drawing.Point(225, 95);
+            this.cbDestino.Name = "cbDestino";
+            this.cbDestino.Size = new System.Drawing.Size(363, 37);
+            this.cbDestino.TabIndex = 3;
+            // 
+            // btnCalcularRuta
+            // 
+            this.btnCalcularRuta.BackColor = System.Drawing.Color.Tan;
+            this.btnCalcularRuta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCalcularRuta.ForeColor = System.Drawing.Color.White;
+            this.btnCalcularRuta.Location = new System.Drawing.Point(70, 177);
+            this.btnCalcularRuta.Name = "btnCalcularRuta";
+            this.btnCalcularRuta.Size = new System.Drawing.Size(141, 54);
+            this.btnCalcularRuta.TabIndex = 4;
+            this.btnCalcularRuta.Text = "Calcular Ruta";
+            this.btnCalcularRuta.UseVisualStyleBackColor = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Tan;
+            this.label4.Location = new System.Drawing.Point(261, 186);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(105, 34);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Resultado:";
+            // 
+            // lblResultadoRuta
+            // 
+            this.lblResultadoRuta.AutoSize = true;
+            this.lblResultadoRuta.Location = new System.Drawing.Point(372, 191);
+            this.lblResultadoRuta.Name = "lblResultadoRuta";
+            this.lblResultadoRuta.Size = new System.Drawing.Size(25, 29);
+            this.lblResultadoRuta.TabIndex = 6;
+            this.lblResultadoRuta.Text = "...";
+            this.lblResultadoRuta.Click += new System.EventHandler(this.lblResultadoRuta_Click);
+            // 
             // ParqueTecnologico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 22F);
@@ -210,6 +297,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -229,6 +318,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TreeView tvJerarquia;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lblResultadoRuta;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnCalcularRuta;
+        private System.Windows.Forms.ComboBox cbDestino;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cbOrigen;
+        private System.Windows.Forms.Label label2;
     }
 }
 
