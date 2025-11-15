@@ -39,14 +39,14 @@
             this.btnBorrarSelecionado = new System.Windows.Forms.Button();
             this.tvJerarquia = new System.Windows.Forms.TreeView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.lblResultadoRuta = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbOrigen = new System.Windows.Forms.ComboBox();
             this.btnCalcularRuta = new System.Windows.Forms.Button();
             this.cbDestino = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cbOrigen = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblResultadoRuta = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -210,26 +210,49 @@
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // lblResultadoRuta
+            // groupBox2
             // 
-            this.lblResultadoRuta.AutoSize = true;
-            this.lblResultadoRuta.Location = new System.Drawing.Point(166, 322);
-            this.lblResultadoRuta.Name = "lblResultadoRuta";
-            this.lblResultadoRuta.Size = new System.Drawing.Size(25, 29);
-            this.lblResultadoRuta.TabIndex = 6;
-            this.lblResultadoRuta.Text = "...";
-            this.lblResultadoRuta.Click += new System.EventHandler(this.lblResultadoRuta_Click);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.cbOrigen);
+            this.groupBox2.Controls.Add(this.btnCalcularRuta);
+            this.groupBox2.Controls.Add(this.cbDestino);
+            this.groupBox2.Location = new System.Drawing.Point(47, 34);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(557, 245);
+            this.groupBox2.TabIndex = 7;
+            this.groupBox2.TabStop = false;
             // 
-            // label4
+            // label3
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Tan;
-            this.label4.Location = new System.Drawing.Point(55, 318);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 34);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Resultado:";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Tan;
+            this.label3.Location = new System.Drawing.Point(20, 100);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(155, 34);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Edificio Destino:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Tan;
+            this.label2.Location = new System.Drawing.Point(20, 43);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(148, 34);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Edificio Origen:";
+            // 
+            // cbOrigen
+            // 
+            this.cbOrigen.FormattingEnabled = true;
+            this.cbOrigen.Location = new System.Drawing.Point(181, 40);
+            this.cbOrigen.Name = "cbOrigen";
+            this.cbOrigen.Size = new System.Drawing.Size(363, 37);
+            this.cbOrigen.TabIndex = 1;
+            this.cbOrigen.SelectedIndexChanged += new System.EventHandler(this.cbOrigen_SelectedIndexChanged);
             // 
             // btnCalcularRuta
             // 
@@ -252,56 +275,33 @@
             this.cbDestino.Size = new System.Drawing.Size(363, 37);
             this.cbDestino.TabIndex = 3;
             // 
-            // label3
+            // lblResultadoRuta
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Tan;
-            this.label3.Location = new System.Drawing.Point(20, 100);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(155, 34);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Edificio Destino:";
+            this.lblResultadoRuta.AutoSize = true;
+            this.lblResultadoRuta.Location = new System.Drawing.Point(166, 322);
+            this.lblResultadoRuta.Name = "lblResultadoRuta";
+            this.lblResultadoRuta.Size = new System.Drawing.Size(25, 29);
+            this.lblResultadoRuta.TabIndex = 6;
+            this.lblResultadoRuta.Text = "...";
+            this.lblResultadoRuta.Click += new System.EventHandler(this.lblResultadoRuta_Click);
             // 
-            // cbOrigen
+            // label4
             // 
-            this.cbOrigen.FormattingEnabled = true;
-            this.cbOrigen.Location = new System.Drawing.Point(181, 40);
-            this.cbOrigen.Name = "cbOrigen";
-            this.cbOrigen.Size = new System.Drawing.Size(363, 37);
-            this.cbOrigen.TabIndex = 1;
-            this.cbOrigen.SelectedIndexChanged += new System.EventHandler(this.cbOrigen_SelectedIndexChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Tan;
-            this.label2.Location = new System.Drawing.Point(20, 43);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(148, 34);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Edificio Origen:";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.cbOrigen);
-            this.groupBox2.Controls.Add(this.btnCalcularRuta);
-            this.groupBox2.Controls.Add(this.cbDestino);
-            this.groupBox2.Location = new System.Drawing.Point(47, 34);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(557, 245);
-            this.groupBox2.TabIndex = 7;
-            this.groupBox2.TabStop = false;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Dubai", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Tan;
+            this.label4.Location = new System.Drawing.Point(55, 318);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(105, 34);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Resultado:";
             // 
             // ParqueTecnologico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(723, 667);
+            this.ClientSize = new System.Drawing.Size(723, 671);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Dubai", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
